@@ -1,0 +1,88 @@
+/* Server CSS Styles */
+
+.root {
+    -fx-background-image: url("image/serverbackground2.jpg");
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+    -fx-font-family: "Arial";
+}
+.title {
+    -fx-text-fill: #00BFFF;
+    -fx-effect: dropshadow(gaussian, #0080ff, 5, 0.4, 0, 0);
+}
+
+.label-text {
+    -fx-text-fill: white;
+}
+
+.start-button {
+    -fx-background-color: transparent;
+    -fx-border-color: #00BFFF;
+    -fx-border-width: 2;
+    -fx-text-fill: #00BFFF;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, #00BFFF, 10, 0.2, 0, 0);
+    -fx-font-weight: bold;
+}
+.start-button:hover {
+    -fx-background-color: rgba(0, 191, 255, 0.2);
+}
+.stop-button {
+    -fx-background-color: linear-gradient(to bottom, #f44336, #da190b);
+    -fx-text-fill: white;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 3, 0, 0, 1);
+}
+
+.stop-button:hover {
+    -fx-background-color: linear-gradient(to bottom, #ff5347, #ea291b);
+}
+
+.header {
+    -fx-background-color: linear-gradient(to bottom, #2d5a3d, #1f3d2a);
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 5, 0, 0, 2);
+}
+
+.client-count {
+    -fx-text-fill: #00BFFF;
+    -fx-font-weight: bold;
+}
+
+.section-title {
+    -fx-text-fill: white;
+}
+
+.game-list {
+    -fx-background-color: transparent;
+    -fx-border-width: 2;
+    -fx-border-radius: 5;
+}
+
+.game-list .list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: #00BFFF;
+    -fx-font-size: 12pt;
+    -fx-padding: 5;
+}
+
+.game-list .list-cell:filled:hover {
+    -fx-background-color: rgba(255, 215, 0, 0.2);
+}
+
+.text-field {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #00BFFF;
+    -fx-border-width: 2;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-font-size: 14pt;
+}
+
+.text-field:focused {
+    -fx-border-color: #00BFFF;
+    -fx-effect: dropshadow(0, 191, 255, 0.2);
+}

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="ServerController" stylesheets="@server.css">
+    <top>
+        <VBox styleClass="text-header">
+            <padding>
+                <Insets bottom="10.0" left="20.0" right="20.0" top="10.0"/>
+            </padding>
+            
+            <HBox alignment="CENTER_LEFT" spacing="20.0">
+                <Label text="Server Control Panel" styleClass="title">
+                    <font>
+                        <Font name="System Bold" size="24.0"/>
+                    </font>
+                </Label>
+                
+                <Region HBox.hgrow="ALWAYS"/>
+                
+                <Label fx:id="clientCountLabel" text="Active Clients: 0" styleClass="client-count">
+                    <font>
+                        <Font size="18.0"/>
+                    </font>
+                </Label>
+            </HBox>
+            
+            <HBox alignment="CENTER" spacing="10.0" style="-fx-padding: 10 0 0 0;">
+                <Button fx:id="stopButton" text="Stop Server" onAction="#handleStop" prefWidth="150.0" styleClass="stop-button">
+                    <font>
+                        <Font size="14.0"/>
+                    </font>
+                </Button>
+            </HBox>
+        </VBox>
+    </top>
+    
+    <center>
+        <VBox alignment="CENTER">
+            <padding>
+                <Insets bottom="200.0" left="20.0" right="20.0" top="12.0"/>
+            </padding>
+            
+            <Label text="Game Activity Log:" styleClass="section-title">
+                <font>
+                    <Font name="System Bold" size="16.0"/>
+                </font>
+            </Label>
+            
+            <ListView fx:id="gameListView" prefHeight="350.0" prefWidth="600.0" maxHeight="350.0" maxWidth="600.0" styleClass="game-list">
+                <VBox.margin>
+                    <Insets top="15.0"/>
+                </VBox.margin>
+            </ListView>
+        </VBox>
+    </center>
+</BorderPane>

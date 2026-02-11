@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER_LEFT" spacing="20.0" stylesheets="@client.css" styleClass="welcome-root" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="WelcomeController">
+    <padding>
+        <Insets bottom="70.0" left="100.0" right="50.0" top="350.0"/>
+    </padding>
+        
+    <VBox alignment="CENTER_LEFT" spacing="10.0">
+        <Label text="IP Address:" styleClass="welcome-label"/>
+        <TextField fx:id="ipField" promptText="localhost" prefWidth="300.0" maxWidth="300.0" alignment="CENTER" styleClass="bet-field"/>
+        
+        <Label text="Port Number:" styleClass="welcome-label">
+            <VBox.margin>
+                <Insets top="10.0"/>
+            </VBox.margin>
+        </Label>
+        <TextField fx:id="portField" prefWidth="300.0" maxWidth="300.0" alignment="CENTER" styleClass="bet-field"/>
+    </VBox>
+    
+    <Button fx:id="connectButton" text="CONNECT TO SERVER" onAction="#handleConnect" prefWidth="300.0" styleClass="connect-button">
+        <VBox.margin>
+            <Insets top="10.0"/>
+        </VBox.margin>
+    </Button>
+    
+    <Label fx:id="messageLabel" text="" textFill="#ff6b6b" styleClass="welcome-label"/>
+</VBox>

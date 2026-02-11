@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" spacing="20.0" stylesheets="@server.css" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="ServerIntroController">
+    <padding>
+        <Insets bottom="40.0" left="40.0" right="40.0" top="60.0"/>
+    </padding>
+    
+    <Label text="Three Card Poker Server" styleClass="title">
+        <font>
+            <Font name="System Bold" size="32.0"/>
+        </font>
+    </Label>
+    
+    <VBox alignment="CENTER" spacing="10.0" style="-fx-padding: 10;">
+        <Label text="Enter Port Number:" styleClass="label-text">
+            <font>
+                <Font size="16.0"/>
+            </font>
+        </Label>
+        
+        <TextField fx:id="portField" promptText="e.g. 5555" prefWidth="100.0" maxWidth="100.0" alignment="CENTER">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </TextField>
+    </VBox>
+    
+    <Button fx:id="startButton" text="Start Server" onAction="#handleStart" prefWidth="200.0" maxWidth="200.0" styleClass="start-button">
+        <font>
+            <Font size="16.0"/>
+        </font>
+    </Button>
+    
+    <Label fx:id="statusLabel" text="" textFill="RED">
+        <font>
+            <Font size="14.0"/>
+        </font>
+    </Label>
+</VBox>
